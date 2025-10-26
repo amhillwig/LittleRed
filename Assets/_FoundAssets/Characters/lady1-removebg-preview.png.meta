@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 2b6b346498a2aa84ea2fe15970de066d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1523987539203221621
+    second: lady1-removebg-preview_0
+  - first:
+      213: -5109195319974061642
+    second: lady1-removebg-preview_1
+  - first:
+      213: -1305953864210734706
+    second: lady1-removebg-preview_2
+  - first:
+      213: -5495395685155094547
+    second: lady1-removebg-preview_3
+  - first:
+      213: -352038478284685282
+    second: lady1-removebg-preview_4
+  - first:
+      213: 5052560747453917925
+    second: lady1-removebg-preview_5
+  - first:
+      213: -7432398490028567019
+    second: lady1-removebg-preview_6
+  - first:
+      213: -782959381599834550
+    second: lady1-removebg-preview_7
+  - first:
+      213: 1539002778272409752
+    second: lady1-removebg-preview_8
+  - first:
+      213: 7995521589316180545
+    second: lady1-removebg-preview_9
+  - first:
+      213: -7638703364857723491
+    second: lady1-removebg-preview_10
+  - first:
+      213: -5970494897709564076
+    second: lady1-removebg-preview_11
+  - first:
+      213: -6117864198115475875
+    second: lady1-removebg-preview_12
+  - first:
+      213: 5318329498231945777
+    second: lady1-removebg-preview_13
+  - first:
+      213: 3874971218857858614
+    second: lady1-removebg-preview_14
+  - first:
+      213: 3593108028224710251
+    second: lady1-removebg-preview_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lady1-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 145
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578645ca79a462510800000000000000
+      internalID: 1523987539203221621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 145
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b99bd81ded7819b0800000000000000
+      internalID: -5109195319974061642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 145
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81aba631e150ede0800000000000000
+      internalID: -1305953864210734706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 145
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defbd1e7dbe6cb3b0800000000000000
+      internalID: -5495395685155094547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 97
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1082928ede4d1bf0800000000000000
+      internalID: -352038478284685282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 97
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eaa21eea3d4e1640800000000000000
+      internalID: 5052560747453917925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 97
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51692bca3f0dad890800000000000000
+      internalID: -7432398490028567019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 97
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4eae2a379e5225f0800000000000000
+      internalID: -782959381599834550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 49
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89824437fd2ab5510800000000000000
+      internalID: 1539002778272409752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 49
+        width: 23
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a582df58cc5fe60800000000000000
+      internalID: 7995521589316180545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 49
+        width: 24
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d950311e2cfddf590800000000000000
+      internalID: -7638703364857723491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 49
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f3db8068a842da0800000000000000
+      internalID: -5970494897709564076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5e3f37fceaf81ba0800000000000000
+      internalID: -6117864198115475875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ab89c30808ec940800000000000000
+      internalID: 5318329498231945777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 25
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63692e60bc9a6c530800000000000000
+      internalID: 3874971218857858614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lady1-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 1
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6620fde6b84dd130800000000000000
+      internalID: 3593108028224710251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      lady1-removebg-preview_0: 1523987539203221621
+      lady1-removebg-preview_1: -5109195319974061642
+      lady1-removebg-preview_10: -7638703364857723491
+      lady1-removebg-preview_11: -5970494897709564076
+      lady1-removebg-preview_12: -6117864198115475875
+      lady1-removebg-preview_13: 5318329498231945777
+      lady1-removebg-preview_14: 3874971218857858614
+      lady1-removebg-preview_15: 3593108028224710251
+      lady1-removebg-preview_2: -1305953864210734706
+      lady1-removebg-preview_3: -5495395685155094547
+      lady1-removebg-preview_4: -352038478284685282
+      lady1-removebg-preview_5: 5052560747453917925
+      lady1-removebg-preview_6: -7432398490028567019
+      lady1-removebg-preview_7: -782959381599834550
+      lady1-removebg-preview_8: 1539002778272409752
+      lady1-removebg-preview_9: 7995521589316180545
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
