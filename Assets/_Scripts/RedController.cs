@@ -16,6 +16,12 @@ public class RedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialogueActive)
+    {
+        // Dialogue is active → player cannot move
+        animator.SetBool("isMoving", false);
+        return;
+    }
         if (Input.GetKey(KeyCode.D))
         {
             // Create a new vector where we modify the x position

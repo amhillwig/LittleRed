@@ -13,13 +13,13 @@ public class CameraFollow : MonoBehaviour
     {
         if (target == null) return;
 
-        Vector3 desiredPosition = target.position + offset;
+        transform.position = target.position + offset;
 
         // Clamp camera position
-        desiredPosition.x = Mathf.Clamp(desiredPosition.x, minX, maxX);
-        desiredPosition.y = Mathf.Clamp(desiredPosition.y, minY, maxY);
+        //desiredPosition.x = Mathf.Clamp(desiredPosition.x, minX, maxX);
+        //desiredPosition.y = Mathf.Clamp(desiredPosition.y, minY, maxY);
 
-        transform.position = desiredPosition;
+        //transform.position = desiredPosition;
 
     }
 }
