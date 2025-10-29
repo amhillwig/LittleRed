@@ -46,7 +46,7 @@ public class RedController : MonoBehaviour
             animator.SetFloat("moveY", 0);
 
         }
-        else if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
             // Create a new vector where we modify the x position
             // of our game object
