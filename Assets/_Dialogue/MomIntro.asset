@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064d0127c1313ce4a8bfea049a66d0cb, type: 3}
+  m_Name: MomIntro
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDIalogue
+  npcName: Mom
+  npcPortrait: {fileID: 0}
+  lines:
+  - Red! Are you even listening to me? WHat're you daydreaming about this is important.
+  - You need to take this food and medicine to your Grandma, she's very sick.
+  - Now, hurry before night falls.
+  - You're being dramatic! If you do exactly as I say, you won't die! WHen have I
+    been wrong??
+  - ...
+  - Don't answer that.
+  typingSpeed: 1
+  voiceSound: {fileID: 0}
+  voicePitch: 1
