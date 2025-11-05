@@ -30,7 +30,6 @@ public class NPC : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerInRange && !IsDialogueActive)
         {
-            Debug.Log("Pressed E");
             StartDialogue();
         }
         if (!IsDialogueActive) return;
@@ -48,7 +47,6 @@ public class NPC : MonoBehaviour
     }
     void StartDialogue()
     {
-        Debug.Log("Starting dialogue for " + dialogueData.npcName);
         IsDialogueActive = true;
         dialogueIndex = 0;
         nameText.SetText(dialogueData.npcName);
