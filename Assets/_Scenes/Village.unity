@@ -1780,7 +1780,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1869315837
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7898419184161637982, guid: ecfcf898ce6e85f4f85bd476962fd23a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.8862745}
@@ -8173,13 +8173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogue:
-    Lines:
-    - You need a silver coin and wine? You're pretty greedy for a little girl, Miss
-      Red.
-    - Well, I don't have any wine, but I could give you a silver if you fetch 8 mushrooms
-      for me from the forest.
-    - Be careful. If you go too far in, the wolf might get his paws on ya! Jk Jk
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
   dialoguePanel: {fileID: 0}
@@ -16199,6 +16192,7 @@ GameObject:
   - component: {fileID: 720364648}
   - component: {fileID: 720364650}
   - component: {fileID: 720364651}
+  - component: {fileID: 720364652}
   m_Layer: 0
   m_Name: Mom
   m_TagString: Untagged
@@ -16250,9 +16244,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -44025399
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1869315837
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1523987539203221621, guid: 2b6b346498a2aa84ea2fe15970de066d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16292,14 +16286,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogue:
-    Lines:
-    - I don't care about your stupid made up stories! You're not gonna die if you
-      just listen to me and stay on the path.
-    - Now. Shoo shoo! Go on before it gets dark.
   lettersPerSecond: 30
-  dialogueData: {fileID: 0}
-  dialoguePanel: {fileID: 1153335978}
+  dialogueData: {fileID: 11400000, guid: 6cb9f7ab042cbd841a7affdf3c6304c9, type: 2}
+  dialoguePanel: {fileID: 620929670}
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
@@ -16333,13 +16322,50 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.003505601, y: -0.22432044}
   m_Size: {x: 0.6683421, y: 0.2617613}
   m_Direction: 1
+--- !u!70 &720364652
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720364647}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.00000023841858, y: 0}
+  m_Size: {x: 0.25, y: 0.43}
+  m_Direction: 0
 --- !u!1 &724703786
 GameObject:
   m_ObjectHideFlags: 0
@@ -50838,14 +50864,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  dialogue:
-    Lines:
-    - You want me to escort you to your Granny's house beacause you'll get eaten
-      if you go alone. Ehhh....
-    - Hmm... I'll go if you give me a silver coin... and a bottle of wine. Some good
-      stuff, not some cheap shit!
-    - You don't have it?
-    - Tough shit. FIgure it out.
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
   dialoguePanel: {fileID: 0}
@@ -53456,6 +53474,7 @@ GameObject:
   - component: {fileID: 1478710527}
   - component: {fileID: 1478710529}
   - component: {fileID: 1478710528}
+  - component: {fileID: 1478710530}
   m_Layer: 0
   m_Name: InternalBoundaries
   m_TagString: Untagged
@@ -53587,6 +53606,42 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 5.8470707, y: 1.8629255}
   m_EdgeRadius: 0
+--- !u!58 &1478710530
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478710526}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 4.6058807, y: 6.3448024}
+  m_Radius: 0.8669934
 --- !u!1 &1483320913
 GameObject:
   m_ObjectHideFlags: 0
@@ -56194,9 +56249,9 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -44025399
-  m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingLayerID: -1869315837
+  m_SortingLayer: 1
+  m_SortingOrder: 1
   m_Sprite: {fileID: -3582961211309927502, guid: aef9c3f75665fc34dba008787b6599e2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -56607,9 +56662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogue:
-    Lines:
-    - Do you want to enter the forest? Press X
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
   dialoguePanel: {fileID: 0}
@@ -62286,9 +62338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
-  dialogue:
-    Lines:
-    - I'm the baker! I don't really have anything else going on yet...
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
   dialoguePanel: {fileID: 0}

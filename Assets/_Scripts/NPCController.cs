@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class NPC : MonoBehaviour
 {
-    public Dialogue dialogue; // Assign in Inspector
+    //public Dialogue dialogue; // Assign in Inspector
     public float lettersPerSecond = 30f;
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
@@ -16,25 +16,39 @@ public class NPC : MonoBehaviour
     private bool isTyping, IsDialogueActive;
     private bool playerInRange = false;
 
+    private void Start()
+    {
+        dialoguePanel.SetActive(false);
+        dialogueText.text = "";
+    }
     public bool CanInteract()
     {
         return IsDialogueActive && playerInRange;
     }
 
-    public void Interact()
+    private void Update()
     {
-        if (IsDialogueActive)
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange && !IsDialogueActive)
         {
-            NextLine();
-        }
-        else
-        {
+            Debug.Log("Pressed E");
             StartDialogue();
         }
-    }
+        if (!IsDialogueActive) return;
 
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isTyping)
+            {
+                // Finish typing instantly if player presses Space
+                dialogueText.text = dialogueData.lines[dialogueIndex];
+                isTyping = false;
+            }
+            else NextLine();
+        }
+    }
     void StartDialogue()
     {
+        Debug.Log("Starting dialogue for " + dialogueData.npcName);
         IsDialogueActive = true;
         dialogueIndex = 0;
         nameText.SetText(dialogueData.npcName);
@@ -79,14 +93,21 @@ public class NPC : MonoBehaviour
 
         }
     }
-    
+
 
     // Detect when player enters interaction range
     private void OnTriggerEnter2D(Collider2D other)
     {
-        while (other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             playerInRange = true;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 
