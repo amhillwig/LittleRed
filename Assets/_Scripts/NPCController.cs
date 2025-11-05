@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine.UI;
 
-public class NPC : MonoBehaviour
+public class NPCController : MonoBehaviour
 {
     //public Dialogue dialogue; // Assign in Inspector
     public float lettersPerSecond = 30f;
     public NPCDialogue dialogueData;
-    public GameObject dialoguePanel;
+    public GameObject dialoguePanel, spacePanel;
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
     private int dialogueIndex;
@@ -42,7 +42,11 @@ public class NPC : MonoBehaviour
                 dialogueText.text = dialogueData.lines[dialogueIndex];
                 isTyping = false;
             }
-            else NextLine();
+            else
+            {
+                
+                NextLine(); 
+            }
         }
     }
     void StartDialogue()
@@ -67,7 +71,7 @@ public class NPC : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
         }
-
+        spacePanel.SetActive(true);
         isTyping = false;
     }
     void NextLine()
