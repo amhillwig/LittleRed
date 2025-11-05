@@ -1305,6 +1305,7 @@ MonoBehaviour:
       both.'
     - You smell mighty tasty tonight, but I would be willing to let you pass without
       a fight if you can offer me something worthy of my mercy.
+    - '* Press X if you want to give the wolf half of grandma''s basket. *'
 --- !u!212 &147507014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2205,7 +2206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 415.7401, y: 85.20001}
+  m_AnchoredPosition: {x: 385, y: 98}
   m_SizeDelta: {x: 700, y: 125}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247891250
@@ -19514,7 +19515,7 @@ GameObject:
   - component: {fileID: 769921858}
   - component: {fileID: 769921857}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19536,8 +19537,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 412.74014, y: 99.10004}
-  m_SizeDelta: {x: 659.2094, y: 89.575775}
+  m_AnchoredPosition: {x: 412.7401, y: 99.10004}
+  m_SizeDelta: {x: 659.2095, y: 89.575775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &769921857
 MonoBehaviour:
@@ -22114,7 +22115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 667.7401, y: 47.100037}
+  m_AnchoredPosition: {x: 667.74005, y: 47.100037}
   m_SizeDelta: {x: 120.2241, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018240749
@@ -23371,7 +23372,7 @@ GameObject:
   - component: {fileID: 1226857081}
   - component: {fileID: 1226857082}
   m_Layer: 0
-  m_Name: QuestionDialogue
+  m_Name: QuestionDialogueUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23386,7 +23387,7 @@ Transform:
   m_GameObject: {fileID: 1226857080}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -415.74008, y: -199.1, z: 0}
+  m_LocalPosition: {x: -415.74005, y: -199.10002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26300,7 +26301,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 521193969}
-  - {fileID: 1754023811}
   m_Father: {fileID: 1681976539}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -27161,6 +27161,7 @@ GameObject:
   - component: {fileID: 1681976537}
   - component: {fileID: 1681976536}
   - component: {fileID: 1681976535}
+  - component: {fileID: 1681976540}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -27187,7 +27188,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681976534}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e98b055f70a2c4244b99dad959739f29, type: 3}
   m_Name: 
@@ -27261,6 +27262,19 @@ Transform:
   - {fileID: 1569234840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1681976540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681976534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e4d057be4786e4e8c8b9ddab4aac6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SandwichDialogue
+  parentObject: {fileID: 0}
 --- !u!1 &1731578696
 GameObject:
   m_ObjectHideFlags: 0
@@ -27402,19 +27416,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754023810}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9086779, y: 0.9086779, z: 0.9086779}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1226857081}
-  m_Father: {fileID: 1569234840}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 400.00003, y: 173.4666}
-  m_SizeDelta: {x: 880.4, y: 381.8}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1754023812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30804,6 +30818,7 @@ SceneRoots:
   - {fileID: 904970666}
   - {fileID: 1266399903}
   - {fileID: 774140530}
+  - {fileID: 1754023811}
   - {fileID: 1681976539}
   - {fileID: 147507015}
   - {fileID: 131369652}
