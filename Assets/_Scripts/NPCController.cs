@@ -13,14 +13,17 @@ public class NPCController : MonoBehaviour
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
     private int dialogueIndex;
-    private bool isTyping, IsDialogueActive, playerInRange = false;
+    private bool isTyping, playerInRange = false;
+    public bool IsDialogueActive;
     public Transform choiceContainer;
 
+    public static NPCController Instance { get; private set; }
     private void Start()
     {
         dialoguePanel.SetActive(false);
-        dialogueText.text = "";
+        dialogueText.text = ""; 
     }
+
     public bool CanInteract()
     {
         return IsDialogueActive && playerInRange;
@@ -39,6 +42,7 @@ public class NPCController : MonoBehaviour
             if (isTyping)
             {
                 // Finish typing instantly if player presses Space
+                StopAllCoroutines();
                 dialogueText.text = dialogueData.lines[dialogueIndex];
                 isTyping = false;
             }
@@ -52,10 +56,13 @@ public class NPCController : MonoBehaviour
     void StartDialogue()
     {
         IsDialogueActive = true;
+        dialoguePanel.SetActive(true);
         dialogueIndex = 0;
         nameText.SetText(dialogueData.npcName);
-        portraitImage.sprite = dialogueData.npcPortrait;
-        dialoguePanel.SetActive(true);
+        if (portraitImage != null)
+        {
+            portraitImage.sprite = dialogueData.npcPortrait;
+        }
         
         StartCoroutine(TypeDialogue());
     }
@@ -129,7 +136,7 @@ public class NPCController : MonoBehaviour
     }
     public void ClearChoices()
     {
-        foreach (Transform child in choiceContainer) Destroy(child.gameObject);
+        foreach (Transform child in choiceContainer) child.gameObject.SetActive(false);
     }
     public GameObject CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
     {
