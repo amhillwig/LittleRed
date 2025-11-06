@@ -5,7 +5,7 @@ using System.Collections.Generic;
 [CreateAssetMenuAttribute(fileName = "Quest", menuName = "Quest", order = 0)]
 public class Quest : ScriptableObject {
     
-    public string questName = "";
+    public string questName = "", questID = "";
     public List<QuestObjective> objectives;
 
     
