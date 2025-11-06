@@ -10,7 +10,7 @@ public class SandwichDialogue : MonoBehaviour
     void Start()
     {
         // Path to the nested child (Parent/Child/Grandchild)
-        Transform childTransform = parentObject.transform.Find("GameManager/UI/DialogueBox");
+        /*Transform childTransform = parentObject.transform.Find("GameManager/UI/DialogueBox");
 
         if (childTransform != null)
         {
@@ -23,7 +23,7 @@ public class SandwichDialogue : MonoBehaviour
         else
         {
             Debug.LogWarning("Nested child not found! Check the path.");
-        }
+        }*/
     }
 
     private void Update()
