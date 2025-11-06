@@ -1145,9 +1145,8 @@ GameObject:
   m_Component:
   - component: {fileID: 147507015}
   - component: {fileID: 147507014}
-  - component: {fileID: 147507013}
-  - component: {fileID: 147507012}
   - component: {fileID: 147507016}
+  - component: {fileID: 147507017}
   m_Layer: 0
   m_Name: Wolf
   m_TagString: Untagged
@@ -1155,66 +1154,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!70 &147507012
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147507011}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.013547911, y: 0.022899916}
-  m_Size: {x: 1.144921, y: 1.3227658}
-  m_Direction: 1
---- !u!114 &147507013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 147507011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  dialogue:
-    Lines:
-    - Good-day, Little Red Riding Hood. Where are you off to on this cold, dark evening?
-    - To your grandmother. I see. And where does your grandmother live, Little Red
-      Riding Hood?
-    - '*To himself* What a tender young creature. What a nice plump mouthful, she
-      will be better to eat than the old woman. I must act craftily, so as to catch
-      both.'
-    - You smell mighty tasty tonight, but I would be willing to let you pass without
-      a fight if you can offer me something worthy of my mercy.
-    - '* Press X if you want to give the wolf half of grandma''s basket. *'
 --- !u!212 &147507014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1325,6 +1264,28 @@ CapsuleCollider2D:
   m_Offset: {x: -0.012168907, y: 0.02811811}
   m_Size: {x: 0.9169605, y: 1.0593954}
   m_Direction: 0
+--- !u!114 &147507017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147507011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb97fc7db22fad4eacf9e5ec84fd069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCController
+  lettersPerSecond: 30
+  dialogueData: {fileID: 11400000, guid: 4ec682371f3403b40b23e9edeb622626, type: 2}
+  dialoguePanel: {fileID: 0}
+  spacePanel: {fileID: 0}
+  choiceButtonPrefab: {fileID: 8112253825499529225, guid: 1f46e03260c922b4caf169a5c514cedc,
+    type: 3}
+  dialogueText: {fileID: 0}
+  nameText: {fileID: 0}
+  portraitImage: {fileID: 0}
+  choiceContainer: {fileID: 0}
 --- !u!1 &163394577
 GameObject:
   m_ObjectHideFlags: 0
