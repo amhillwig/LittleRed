@@ -22,6 +22,15 @@ MonoBehaviour:
     been wrong??
   - ...
   - Don't answer that.
+  - Glad you understand. Go on.
+  - Don't talk Back to your mother!
+  endDialogueLines: 0000000000000101
   typingSpeed: 1
   voiceSound: {fileID: 0}
   voicePitch: 1
+  choices:
+  - dialogueIndex: 5
+    choices:
+    - Okay I will...
+    - You don't have to be such a bitch..
+    nextDialogueIndexes: 0600000007000000

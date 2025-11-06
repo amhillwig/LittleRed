@@ -8175,11 +8175,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
+  choiceData:
+    dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
   dialoguePanel: {fileID: 0}
   spacePanel: {fileID: 0}
+  choiceButtonPrefab: {fileID: 0}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
   portraitImage: {fileID: 0}
+  choiceContainer: {fileID: 0}
 --- !u!70 &359109964
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9779,7 +9785,7 @@ MonoBehaviour:
   m_text: Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85590323a5f7ecb4b9da6a97c7ff0879, type: 2}
-  m_sharedMaterial: {fileID: 1113029466535181143, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
+  m_sharedMaterial: {fileID: 8965038007429957966, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -16394,11 +16400,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   lettersPerSecond: 30
   dialogueData: {fileID: 11400000, guid: 6cb9f7ab042cbd841a7affdf3c6304c9, type: 2}
+  choiceData:
+    dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
   dialoguePanel: {fileID: 620929670}
-  spacePanel: {fileID: 0}
+  spacePanel: {fileID: 924880664}
+  choiceButtonPrefab: {fileID: 8112253825499529225, guid: 1f46e03260c922b4caf169a5c514cedc,
+    type: 3}
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
+  choiceContainer: {fileID: 679054046}
 --- !u!70 &720364651
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -19732,7 +19745,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85590323a5f7ecb4b9da6a97c7ff0879, type: 2}
-  m_sharedMaterial: {fileID: 1113029466535181143, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
+  m_sharedMaterial: {fileID: 8965038007429957966, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
     type: 2}
   m_fontSharedMaterials:
   - {fileID: 0}
@@ -51093,11 +51106,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
   lettersPerSecond: 30
   dialogueData: {fileID: 11400000, guid: 4ec682371f3403b40b23e9edeb622626, type: 2}
+  choiceData:
+    dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
   dialoguePanel: {fileID: 620929670}
   spacePanel: {fileID: 0}
+  choiceButtonPrefab: {fileID: 0}
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
+  choiceContainer: {fileID: 0}
 --- !u!70 &1338902953
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -56794,7 +56813,7 @@ MonoBehaviour:
   m_text: Space
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85590323a5f7ecb4b9da6a97c7ff0879, type: 2}
-  m_sharedMaterial: {fileID: 1113029466535181143, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
+  m_sharedMaterial: {fileID: 8965038007429957966, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -57029,11 +57048,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
+  choiceData:
+    dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
   dialoguePanel: {fileID: 0}
   spacePanel: {fileID: 0}
+  choiceButtonPrefab: {fileID: 0}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
   portraitImage: {fileID: 0}
+  choiceContainer: {fileID: 0}
 --- !u!70 &1643187040
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -62706,11 +62731,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   lettersPerSecond: 30
   dialogueData: {fileID: 0}
+  choiceData:
+    dialogueIndex: 0
+    choices: []
+    nextDialogueIndexes: 
   dialoguePanel: {fileID: 0}
   spacePanel: {fileID: 0}
+  choiceButtonPrefab: {fileID: 0}
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
   portraitImage: {fileID: 0}
+  choiceContainer: {fileID: 0}
 --- !u!70 &1915851628
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
