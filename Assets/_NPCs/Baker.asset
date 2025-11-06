@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 064d0127c1313ce4a8bfea049a66d0cb, type: 3}
-  m_Name: Woodsman
+  m_Name: Baker
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Woodsman
-  npcPortrait: {fileID: -543646665, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
+  npcName: Baker
+  npcPortrait: {fileID: -2014038286, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
   lines: []
   endDialogueLines: 
   typingSpeed: 0

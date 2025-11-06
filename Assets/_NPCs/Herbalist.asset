@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064d0127c1313ce4a8bfea049a66d0cb, type: 3}
   m_Name: Herbalist
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: 
-  npcPortrait: {fileID: 0}
+  npcName: Herbalist
+  npcPortrait: {fileID: 765912962, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
   lines: []
   endDialogueLines: 
   typingSpeed: 0

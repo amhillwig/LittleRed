@@ -30,6 +30,7 @@ public class NPCController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerInRange && !IsDialogueActive)
         {
+            Debug.Log("Pressed E");
             StartDialogue();
         }
         if (!IsDialogueActive) return;
@@ -90,7 +91,7 @@ public class NPCController : MonoBehaviour
             dialoguePanel.SetActive(false);
             return;
         }
-        foreach (DialogueChoice dialogueChoice in dialogueData.dialogueChoice.choices)
+        foreach (DialogueChoice dialogueChoice in dialogueData.choices)
         {
             if(dialogueChoice.dialogueIndex == dialogueIndex)
             {
@@ -158,4 +159,5 @@ public class NPCController : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeDialogue());
     }
+    
 }

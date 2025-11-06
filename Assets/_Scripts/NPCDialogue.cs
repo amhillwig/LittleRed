@@ -12,13 +12,17 @@ public class NPCDialogue : ScriptableObject
     public AudioClip voiceSound;
     public float voicePitch = 1f;
     public DialogueChoice[] choices;
+    public int inProgressIndex, completedIndex;
+    public Quest quest;
+
     
 }
 [System.Serializable]
     public class DialogueChoice
     {
-        public int dialogueIndex;
-        public string[] choices;
-        public int[] nextDialogueIndexes;
+    public int dialogueIndex;
+    public string[] choices;
+    public int[] nextDialogueIndexes;
+    public bool[] givesQuest;
     }
     

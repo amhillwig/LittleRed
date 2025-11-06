@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class Quest : ScriptableObject {
     
     public string questName = "", questID = "";
-    public List<QuestObjective> objectives;
+    public List<Quest.QuestObjective> objectives;
 
     
     [System.Serializable]

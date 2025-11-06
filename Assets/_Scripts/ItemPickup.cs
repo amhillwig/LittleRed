@@ -9,4 +9,7 @@ public class ItemPickup : MonoBehaviour
         InventoryManager.Instance.AddItem(itemName);
         Destroy(gameObject);
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        
+    }
 }

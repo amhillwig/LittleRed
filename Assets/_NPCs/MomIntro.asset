@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: MomIntro
   m_EditorClassIdentifier: Assembly-CSharp::NPCDIalogue
   npcName: Mom
-  npcPortrait: {fileID: 0}
+  npcPortrait: {fileID: -6674868978544099146, guid: 4cb3c8e0fd9964e4796a83414ae5d252,
+    type: 3}
   lines:
   - Red! Are you even listening to me? WHat're you daydreaming about this is important.
   - You need to take this food and medicine to your Grandma, she's very sick.
