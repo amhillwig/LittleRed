@@ -13,7 +13,7 @@ public class NPCController : MonoBehaviour
     public GameObject dialoguePanel, spacePanel, choiceButtonPrefab;
     public TMP_Text dialogueText, nameText;
     public Image portraitImage;
-    private int dialogueIndex;
+    private int dialogueIndex = 0;
     private bool isTyping, playerInRange = false;
     public static bool IsDialogueActive;
     public Transform choiceContainer;
@@ -60,6 +60,7 @@ public class NPCController : MonoBehaviour
     }
     void DisplayChoices(DialogueChoice choice)
     {
+        spacePanel.SetActive(false);
         for (int i = 0; i < choice.choices.Length; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
@@ -116,9 +117,12 @@ public class NPCController : MonoBehaviour
         ClearChoices();
 
         // Check for end dialogue flag
-        if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
+        if (dialogueData.endDialogueLines.Length >= dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
         {
-            EndDialogue();
+             StopAllCoroutines();
+            IsDialogueActive = false;
+            dialogueText.SetText("");
+            dialoguePanel.SetActive(false);
             return;
         }
         
@@ -139,7 +143,10 @@ public class NPCController : MonoBehaviour
         }
         else
         {
-            EndDialogue();
+             StopAllCoroutines();
+            IsDialogueActive = false;
+            dialogueText.SetText("");
+            dialoguePanel.SetActive(false);
         }
     }
 
@@ -220,23 +227,12 @@ public class NPCController : MonoBehaviour
     {
         isTyping = true;
         dialogueText.text = "";
-        spacePanel.SetActive(false); // Hide space panel while typing
 
-        string currentLine = dialogueData.lines[dialogueIndex];
-        
-        // Calculate typing speed dynamically if lettersPerSecond > 0
-        float waitTime = dialogueData.typingSpeed > 0 ? 1f / dialogueData.typingSpeed : 0f; 
-
-        foreach (char letter in currentLine)
+        foreach (char letter in dialogueData.lines[dialogueIndex])
         {
             dialogueText.text += letter;
-            // Optionally play voice sound here
-            if (waitTime > 0f) 
-                yield return new WaitForSeconds(waitTime);
-            else 
-                yield return null; // Wait 1 frame if speed is 0
+            yield return new WaitForSeconds(1f / lettersPerSecond);
         }
-        
         spacePanel.SetActive(true);
         isTyping = false;
     }
