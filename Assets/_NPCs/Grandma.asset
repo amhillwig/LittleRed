@@ -10,28 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 064d0127c1313ce4a8bfea049a66d0cb, type: 3}
-  m_Name: Wolf
+  m_Name: Grandma
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Wolf
+  npcName: Grandma
   npcPortrait: {fileID: 0}
   lines:
-  - im the wolf
-  - howl
-  - howl 1
-  - give me food
-  - yummy
-  - im gonna eat you
-  endDialogueLines: 000000010101
+  - Hello my Little Red.
+  - You have made it.
+  endDialogueLines: 
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices:
-  - dialogueIndex: 3
-    choices:
-    - yes
-    - no
-    nextDialogueIndexes: 0400000005000000
-    givesQuest: 
+  choices: []
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 0}
