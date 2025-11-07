@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Woodsman
   npcPortrait: {fileID: -543646665, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
-  lines: []
+  lines:
+  - HI
+  - No I shan't escort you to your grandma
+  - Bye
   endDialogueLines: 
   typingSpeed: 0
   voiceSound: {fileID: 0}

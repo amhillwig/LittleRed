@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Baker
   npcPortrait: {fileID: -2014038286, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
-  lines: []
+  lines:
+  - Hi Little Red
+  - I have plenty of baked goods inside.
   endDialogueLines: 
   typingSpeed: 0
   voiceSound: {fileID: 0}

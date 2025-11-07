@@ -14,7 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Herbalist
   npcPortrait: {fileID: 765912962, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
-  lines: []
+  lines:
+  - Hello Miss Red
+  - How can I be of help
+  - Hmm the safest way through the woods is to stay on the path
+  - Do not go left or right. You understand.
   endDialogueLines: 
   typingSpeed: 0
   voiceSound: {fileID: 0}

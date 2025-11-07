@@ -33,10 +33,9 @@ MonoBehaviour:
   - dialogueIndex: 5
     choices:
     - Okay I will...
-    - You don't have to be such a bitch..
+    - No I won't
     nextDialogueIndexes: 0600000007000000
     givesQuest: 00
-    death: 
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 0}
