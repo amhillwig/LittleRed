@@ -8182,6 +8182,7 @@ MonoBehaviour:
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
+  IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
 --- !u!70 &359109964
 CapsuleCollider2D:
@@ -9818,7 +9819,7 @@ MonoBehaviour:
   m_text: Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85590323a5f7ecb4b9da6a97c7ff0879, type: 2}
-  m_sharedMaterial: {fileID: 8965038007429957966, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
+  m_sharedMaterial: {fileID: 2126260619955520312, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -11643,8 +11644,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811937c8b0a3c6d40962ed816352ac38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
-  activateQuests: []
-  handinQuestIDs: []
 --- !u!1 &526535774
 GameObject:
   m_ObjectHideFlags: 0
@@ -13733,6 +13732,7 @@ GameObject:
   - component: {fileID: 629880898}
   - component: {fileID: 629880897}
   - component: {fileID: 629880899}
+  - component: {fileID: 629880900}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13835,8 +13835,104 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
   inventoryPanel: {fileID: 1143141338}
-  slotPrefab: {fileID: 0}
-  itemPrefabs: []
+  inventorySlot: {fileID: 0}
+--- !u!82 &629880900
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629880894}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: d675bd699fefa1e4bbf12f9c0c59fdec, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.186
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &630871263
 GameObject:
   m_ObjectHideFlags: 0
@@ -16490,6 +16586,7 @@ MonoBehaviour:
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
+  IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
 --- !u!70 &720364651
 CapsuleCollider2D:
@@ -19870,7 +19967,7 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85590323a5f7ecb4b9da6a97c7ff0879, type: 2}
-  m_sharedMaterial: {fileID: 8965038007429957966, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
+  m_sharedMaterial: {fileID: 2126260619955520312, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
     type: 2}
   m_fontSharedMaterials:
   - {fileID: 0}
@@ -53559,6 +53656,7 @@ MonoBehaviour:
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
+  IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
 --- !u!70 &1338902953
 CapsuleCollider2D:
@@ -59256,7 +59354,7 @@ MonoBehaviour:
   m_text: Space
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85590323a5f7ecb4b9da6a97c7ff0879, type: 2}
-  m_sharedMaterial: {fileID: 8965038007429957966, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
+  m_sharedMaterial: {fileID: 2126260619955520312, guid: 85590323a5f7ecb4b9da6a97c7ff0879,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -59497,6 +59595,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   nameText: {fileID: 0}
   portraitImage: {fileID: 0}
+  IsDialogueActive: 0
   choiceContainer: {fileID: 0}
 --- !u!70 &1643187040
 CapsuleCollider2D:
@@ -64208,8 +64307,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811937c8b0a3c6d40962ed816352ac38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
-  activateQuests: []
-  handinQuestIDs: []
 --- !u!1001 &1863659632
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -65347,6 +65444,7 @@ MonoBehaviour:
   dialogueText: {fileID: 896799863}
   nameText: {fileID: 432477811}
   portraitImage: {fileID: 1580406496}
+  IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
 --- !u!70 &1915851628
 CapsuleCollider2D:
