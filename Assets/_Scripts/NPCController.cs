@@ -66,7 +66,7 @@ public class NPCController : MonoBehaviour
             int nextIndex = choice.nextDialogueIndexes[i];
             bool givesQuest = choice.givesQuest[i];
             //for wolf
-            bool deathEnding = choice.death[i];
+            //bool deathEnding = choice.death[i];
             CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
         }
     }
