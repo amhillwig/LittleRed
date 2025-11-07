@@ -18,17 +18,14 @@ MonoBehaviour:
   - Welcome Little Red
   - I have been waiting for you here.
   - I am very hungry and I have let you pass once but not this time.
-  endDialogueLines: 000000000000
+  - Hmmm. Actually, let's play a game
+  - I'll think of a number and if you guess the number right I might let you go.
+  - Press X to choose.
+  endDialogueLines: 00000000000000
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices:
-  - dialogueIndex: 4
-    choices:
-    - yes
-    - no
-    nextDialogueIndexes: 0400000005000000
-    givesQuest: 
+  choices: []
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 0}

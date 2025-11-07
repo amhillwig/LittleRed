@@ -17,12 +17,12 @@ public class RedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (NPCController.IsDialogueActive)
+        /*if (NPCController.IsDialogueActive)
         {
             // Dialogue is active → player cannot move
             animator.SetBool("isMoving", false);
             return;
-        }
+        }*/
         Vector2 move = Vector2.zero;
         if (Input.GetKey(KeyCode.D))
         {

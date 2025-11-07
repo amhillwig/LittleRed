@@ -12,7 +12,7 @@ public class RewardsController : MonoBehaviour
     }
     
     // FIX: Changed QuestReward to rewards
-    public void GiveReward(Quest quest)
+    /*public void GiveReward(Quest quest)
     {
         if (quest?.rewards == null) return;
         foreach (var reward in quest.rewards)
@@ -35,5 +35,5 @@ public class RewardsController : MonoBehaviour
         var itemPrefab = FindAnyObjectByType<ItemDictionary>()?.GetItemPrefab(itemId);
         if (itemPrefab == null) return;
         InventoryManager.Instance.AddItem(itemPrefab);
-    }
+    }*/
 }
