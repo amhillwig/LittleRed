@@ -61,10 +61,12 @@ public class NPCController : MonoBehaviour
     void DisplayChoices(DialogueChoice choice)
     {
         spacePanel.SetActive(false);
-        for (int i = 0; i < choice.choices.Length; i++)
+        for (int i = 1; i < choice.choices.Length; i++)
         {
             int nextIndex = choice.nextDialogueIndexes[i];
             bool givesQuest = choice.givesQuest[i];
+            //for wolf
+            bool deathEnding = choice.death[i];
             CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
         }
     }
@@ -97,9 +99,23 @@ public class NPCController : MonoBehaviour
     {
         // Check if quest is completed before giving reward and handing in
         if (!QuestController.Instance.IsQuestCompleted(quest.questID)) return;
-        
+
         RewardsController.Instance.GiveReward(quest);
         QuestController.Instance.HandInQuest(quest.questID);
+    }
+    
+    void InvokeDeath()
+    {
+        // Stop any ongoing dialogue
+        StopAllCoroutines();
+        IsDialogueActive = false;
+        dialoguePanel.SetActive(false);
+        ClearChoices();
+        spacePanel.SetActive(false);
+
+        // Load your death scene or enable death UI
+        // Example using SceneManager:
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Death");
     }
 
     void NextLine()
@@ -143,7 +159,7 @@ public class NPCController : MonoBehaviour
         }
         else
         {
-             StopAllCoroutines();
+            StopAllCoroutines();
             IsDialogueActive = false;
             dialogueText.SetText("");
             dialoguePanel.SetActive(false);
