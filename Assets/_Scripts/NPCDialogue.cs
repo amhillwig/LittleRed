@@ -23,6 +23,6 @@ public class NPCDialogue : ScriptableObject
     public int dialogueIndex;
     public string[] choices;
     public int[] nextDialogueIndexes;
-    public bool[] givesQuest;
+    public bool[] givesQuest, death;
     }
     
