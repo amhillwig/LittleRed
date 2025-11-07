@@ -17,18 +17,13 @@ MonoBehaviour:
   lines:
   - Hello my Little Red.
   - You have made it.
-  - Give grandma her basket and meds.
+  - You are so brave to have come all this way.
+  - Press X to give grandma her basket and meds.
   endDialogueLines: 
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices:
-  - dialogueIndex: 2
-    choices:
-    - yes
-    - no
-    nextDialogueIndexes: 
-    givesQuest: 
+  choices: []
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 0}
