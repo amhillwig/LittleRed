@@ -21,3 +21,6 @@ MonoBehaviour:
   - objectiveID: WineBottle
     requiredAmount: 1
     currentAmount: 0
+  rewards:
+  - type: 1
+    rewardID: 0

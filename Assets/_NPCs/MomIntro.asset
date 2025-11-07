@@ -16,7 +16,7 @@ MonoBehaviour:
   npcPortrait: {fileID: -6674868978544099146, guid: 4cb3c8e0fd9964e4796a83414ae5d252,
     type: 3}
   lines:
-  - Red! Are you even listening to me? WHat're you daydreaming about this is important.
+  - Red! Are you even listening to me? What're you daydreaming about??  This is important!
   - You need to take this food and medicine to your Grandma, she's very sick.
   - Now, hurry before night falls.
   - You're being dramatic! If you do exactly as I say, you won't die! WHen have I
@@ -35,3 +35,12 @@ MonoBehaviour:
     - Okay I will...
     - You don't have to be such a bitch..
     nextDialogueIndexes: 0600000007000000
+    givesQuest: 
+  - dialogueIndex: 2
+    choices:
+    - 'Plz plz plz don''t make me go, Mom! The wolf will eat me dead! '
+    nextDialogueIndexes: 03000000
+    givesQuest: 
+  inProgressIndex: 0
+  completedIndex: 0
+  quest: {fileID: 0}

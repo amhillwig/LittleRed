@@ -15,20 +15,12 @@ public class NPCController : MonoBehaviour
     public Image portraitImage;
     private int dialogueIndex;
     private bool isTyping, playerInRange = false;
-    public bool IsDialogueActive;
+    public static bool IsDialogueActive;
     public Transform choiceContainer;
 
     private enum QuestState { NotStarted, InProgress, Completed }
     private QuestState questState = QuestState.NotStarted;
 
-    public static NPCController Instance { get; private set; } // Added singleton property
-    
-    private void Awake() // Added Awake for singleton pattern
-    {
-        if (Instance == null) Instance = this;
-        else Destroy(gameObject);
-    }
-    
     private void Start()
     {
         dialoguePanel.SetActive(false);

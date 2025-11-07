@@ -20,3 +20,6 @@ MonoBehaviour:
   voiceSound: {fileID: 0}
   voicePitch: 1
   choices: []
+  inProgressIndex: 0
+  completedIndex: 0
+  quest: {fileID: 11400000, guid: 1344e325ce8e422469077dd7c301843b, type: 2}

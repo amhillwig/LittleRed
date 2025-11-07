@@ -17,7 +17,7 @@ public class RedController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (NPCController.Instance != null && NPCController.Instance.IsDialogueActive)
+        if (NPCController.IsDialogueActive)
         {
             // Dialogue is active → player cannot move
             animator.SetBool("isMoving", false);
