@@ -3794,7 +3794,7 @@ MonoBehaviour:
   nameText: {fileID: 312767637}
   portraitImage: {fileID: 0}
   IsDialogueActive: 0
-  choiceContainer: {fileID: 0}
+  choiceContainer: {fileID: 273223426}
 --- !u!212 &613833810
 SpriteRenderer:
   m_ObjectHideFlags: 0
