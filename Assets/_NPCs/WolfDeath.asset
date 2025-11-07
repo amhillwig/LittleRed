@@ -15,7 +15,9 @@ MonoBehaviour:
   npcName: Wolf
   npcPortrait: {fileID: 0}
   lines:
-  - Wrong Choice Little Red
+  - Welcome Little Red
+  - I have been waiting for you here.
+  - I am very hungry and I have let you pass once but not this time.
   endDialogueLines: 000000000000
   typingSpeed: 0
   voiceSound: {fileID: 0}

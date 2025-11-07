@@ -16969,6 +16969,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811937c8b0a3c6d40962ed816352ac38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
+  activateQuests: []
+  handinQuestIDs: []
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -20520,7 +20522,7 @@ GameObject:
   - component: {fileID: 1031740131}
   - component: {fileID: 1031740130}
   m_Layer: 0
-  m_Name: Tester
+  m_Name: QuestionDefine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20812,7 +20814,6 @@ MonoBehaviour:
   dialogueText: {fileID: 1399824670}
   nameText: {fileID: 1006435845}
   portraitImage: {fileID: 0}
-  IsDialogueActive: 0
   choiceContainer: {fileID: 1426374488}
 --- !u!212 &1083553609
 SpriteRenderer:

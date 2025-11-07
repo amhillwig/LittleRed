@@ -708,6 +708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811937c8b0a3c6d40962ed816352ac38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
+  activateQuests: []
+  handinQuestIDs: []
 --- !u!1 &722365077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1858,6 +1860,52 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
+--- !u!1 &1388977676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388977678}
+  - component: {fileID: 1388977677}
+  m_Layer: 0
+  m_Name: SceneTimer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1388977677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388977676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d70bb1db94e9340813b4e903c4503b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  sceneToLoad: Menu
+  delaySeconds: 10
+--- !u!4 &1388977678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388977676}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 300.733, y: 134.99132, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1427471678
 GameObject:
   m_ObjectHideFlags: 0
@@ -2952,3 +3000,4 @@ SceneRoots:
   - {fileID: 1795664939}
   - {fileID: 1267148724}
   - {fileID: 1701865732}
+  - {fileID: 1388977678}

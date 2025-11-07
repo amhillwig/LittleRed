@@ -3793,7 +3793,6 @@ MonoBehaviour:
   dialogueText: {fileID: 354061917}
   nameText: {fileID: 312767637}
   portraitImage: {fileID: 0}
-  IsDialogueActive: 0
   choiceContainer: {fileID: 273223426}
 --- !u!212 &613833810
 SpriteRenderer:
@@ -4807,6 +4806,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2403937}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1267884533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267884536}
+  - component: {fileID: 1267884535}
+  - component: {fileID: 1267884537}
+  m_Layer: 0
+  m_Name: TeleportOutside
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!70 &1267884535
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267884533}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.96815753, y: -1.0960658}
+  m_Size: {x: 3.41252, y: 3.41252}
+  m_Direction: 0
+--- !u!4 &1267884536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267884533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.11, y: -2.16, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267884537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267884533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b51457b5a226c5419fbc2070641db1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportToForest
+  SceneToLoad: Forest
 --- !u!1 &1307818750
 GameObject:
   m_ObjectHideFlags: 0
@@ -4930,6 +5012,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811937c8b0a3c6d40962ed816352ac38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestController
+  activateQuests: []
+  handinQuestIDs: []
 --- !u!1 &1382217925
 GameObject:
   m_ObjectHideFlags: 0
@@ -5170,12 +5254,12 @@ PrefabInstance:
     - target: {fileID: 6819166926674486563, guid: e850f8acce4837242b6ea58e8eef8007,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.205
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 6819166926674486563, guid: e850f8acce4837242b6ea58e8eef8007,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5911
+      value: -1.14
       objectReference: {fileID: 0}
     - target: {fileID: 6819166926674486563, guid: e850f8acce4837242b6ea58e8eef8007,
         type: 3}
@@ -5230,7 +5314,7 @@ PrefabInstance:
     - target: {fileID: 8485813467203724933, guid: e850f8acce4837242b6ea58e8eef8007,
         type: 3}
       propertyPath: speed
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5795,7 +5879,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1985723575}
-  - component: {fileID: 1985723574}
   - component: {fileID: 1985723573}
   - component: {fileID: 1985723572}
   m_Layer: 0
@@ -5854,18 +5937,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.49362087, y: -0.5029347}
   m_Size: {x: 1.9342937, y: 4.0548625}
   m_Direction: 0
---- !u!114 &1985723574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1985723571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9252558e45a60d144b215add86715ff1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
 --- !u!4 &1985723575
 Transform:
   m_ObjectHideFlags: 0
@@ -6212,3 +6283,4 @@ SceneRoots:
   - {fileID: 1197309414}
   - {fileID: 613833811}
   - {fileID: 2403937}
+  - {fileID: 1267884536}

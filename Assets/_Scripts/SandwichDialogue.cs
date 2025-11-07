@@ -16,7 +16,7 @@ public class SandwichDialogue : MonoBehaviour
         {
             
             QuestionDialogueUI.Instance.ShowQuestion("Do you want to offer the wolf grandma's basket?", () => {
-                SceneManager.LoadScene("Forest");
+                SceneManager.LoadScene("ForestAfterWolf");
             }, () => {
                 SceneManager.LoadScene("Death");
                 });
