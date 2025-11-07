@@ -1,3 +1,4 @@
+// NPCController.cs - Complete and Corrected
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 
 public class NPCController : MonoBehaviour
 {
-    //public Dialogue dialogue; // Assign in Inspector
+    //... (properties remain the same)
     public float lettersPerSecond = 30f;
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel, spacePanel, choiceButtonPrefab;
@@ -17,7 +18,17 @@ public class NPCController : MonoBehaviour
     public bool IsDialogueActive;
     public Transform choiceContainer;
 
-    public static NPCController Instance { get; private set; }
+    private enum QuestState { NotStarted, InProgress, Completed }
+    private QuestState questState = QuestState.NotStarted;
+
+    public static NPCController Instance { get; private set; } // Added singleton property
+    
+    private void Awake() // Added Awake for singleton pattern
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
+    }
+    
     private void Start()
     {
         dialoguePanel.SetActive(false);
@@ -29,57 +40,75 @@ public class NPCController : MonoBehaviour
         return IsDialogueActive && playerInRange;
     }
 
-    private void Update()
+    void ChooseOption(int next, bool givesQuest)
     {
-        if (Input.GetKeyDown(KeyCode.E) && playerInRange && !IsDialogueActive)
+        if (givesQuest && dialogueData.quest != null) // Check for null quest
         {
-            Debug.Log("Pressed E");
-            StartDialogue();
+            // This is now correct because QuestController.AcceptQuest is fixed
+            QuestController.Instance.AcceptQuest(dialogueData.quest);
+            questState = QuestState.InProgress;
         }
-        if (!IsDialogueActive) return;
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        dialogueIndex = next;
+        ClearChoices();
+        StopAllCoroutines();
+        StartCoroutine(TypeDialogue());
+    }
+    public void ClearChoices()
+    {
+        foreach (Transform child in choiceContainer) Destroy(child.gameObject); // FIX: Destroy the choice buttons
+    }
+
+    public GameObject CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
+    {
+        GameObject choiceButton = Instantiate(choiceButtonPrefab, choiceContainer);
+        choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
+        choiceButton.transform.GetComponent<Button>().onClick.AddListener(onClick);
+        return choiceButton;
+    }
+    void DisplayChoices(DialogueChoice choice)
+    {
+        for (int i = 0; i < choice.choices.Length; i++)
         {
-            if (isTyping)
-            {
-                // Finish typing instantly if player presses Space
-                StopAllCoroutines();
-                dialogueText.text = dialogueData.lines[dialogueIndex];
-                isTyping = false;
-            }
-            else
-            {
-                
-                NextLine(); 
-            }
+            int nextIndex = choice.nextDialogueIndexes[i];
+            bool givesQuest = choice.givesQuest[i];
+            CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex, givesQuest));
         }
     }
-    void StartDialogue()
+
+    void DisplayLine()
     {
-        IsDialogueActive = true;
-        dialoguePanel.SetActive(true);
-        dialogueIndex = 0;
-        nameText.SetText(dialogueData.npcName);
-        if (portraitImage != null)
-        {
-            portraitImage.sprite = dialogueData.npcPortrait;
-        }
-        
+        StopAllCoroutines();
         StartCoroutine(TypeDialogue());
     }
 
-    private IEnumerator TypeDialogue()
+    public void EndDialogue()
     {
-        isTyping = true;
-        dialogueText.text = "";
-
-        foreach (char letter in dialogueData.lines[dialogueIndex])
+        // Check for quest completion and hand-in on dialogue end
+        if (dialogueData.quest != null
+            && questState == QuestState.Completed
+            && !QuestController.Instance.IsQuestHandedIn(dialogueData.quest.questID))
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(1f / lettersPerSecond);
+            HandleCompletion(dialogueData.quest); // Pass the actual Quest object
         }
-        spacePanel.SetActive(true);
-        isTyping = false;
+        
+        StopAllCoroutines();
+        IsDialogueActive = false;
+        dialogueText.SetText("");
+        dialoguePanel.SetActive(false);
+        ClearChoices(); // Clear choices when ending dialogue
     }
+
+    // FIX: Changed parameter type from QuestState to Quest
+    void HandleCompletion(Quest quest)
+    {
+        // Check if quest is completed before giving reward and handing in
+        if (!QuestController.Instance.IsQuestCompleted(quest.questID)) return;
+        
+        RewardsController.Instance.GiveReward(quest);
+        QuestController.Instance.HandInQuest(quest.questID);
+    }
+
     void NextLine()
     {
         if (isTyping)
@@ -87,36 +116,38 @@ public class NPCController : MonoBehaviour
             StopAllCoroutines();
             dialogueText.SetText(dialogueData.lines[dialogueIndex]);
             isTyping = false;
-        }
-        ClearChoices();
-        //check if end dialogue checked
-        if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
-        {
-            StopAllCoroutines();
-            IsDialogueActive = false;
-            dialogueText.SetText("");
-            dialoguePanel.SetActive(false);
+            spacePanel.SetActive(true); // Show space panel when typing is finished
             return;
         }
+        
+        spacePanel.SetActive(false);
+        ClearChoices();
+
+        // Check for end dialogue flag
+        if (dialogueData.endDialogueLines.Length > dialogueIndex && dialogueData.endDialogueLines[dialogueIndex])
+        {
+            EndDialogue();
+            return;
+        }
+        
+        // Check for choices
         foreach (DialogueChoice dialogueChoice in dialogueData.choices)
         {
-            if(dialogueChoice.dialogueIndex == dialogueIndex)
+            if (dialogueChoice.dialogueIndex == dialogueIndex)
             {
                 DisplayChoices(dialogueChoice);
-                return;
+                return; // Stop and wait for user choice
             }
         }
 
+        // Move to next line
         if (++dialogueIndex < dialogueData.lines.Length)
         {
             StartCoroutine(TypeDialogue());
         }
         else
         {
-            StopAllCoroutines();
-            IsDialogueActive = false;
-            dialogueText.SetText("");
-            dialoguePanel.SetActive(false);
+            EndDialogue();
         }
     }
 
@@ -132,39 +163,105 @@ public class NPCController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerInRange = false;
+            EndDialogue(); // Optionally end dialogue if player leaves range
         }
     }
-    public void ClearChoices()
+
+    void StartDialogue()
     {
-        foreach (Transform child in choiceContainer) child.gameObject.SetActive(false);
-    }
-    public GameObject CreateChoiceButton(string choiceText, UnityEngine.Events.UnityAction onClick)
-    {
-        GameObject choiceButton = Instantiate(choiceButtonPrefab, choiceContainer);
-        choiceButton.GetComponentInChildren<TMP_Text>().text = choiceText;
-        choiceButton.transform.GetComponent<Button>().onClick.AddListener(onClick);
-        return choiceButton;
-    }
-    void DisplayChoices(DialogueChoice choice)
-    {
-        for (int i = 0; i < choice.choices.Length; i++)
+        //sync
+        SyncQuestState();
+        
+        //set line based on quest state
+        if (questState == QuestState.NotStarted) dialogueIndex = 0;
+        else if (questState == QuestState.InProgress) dialogueIndex = dialogueData.inProgressIndex;
+        else if (questState == QuestState.Completed) dialogueIndex = dialogueData.completedIndex;
+        
+        // Safety check to ensure index is valid
+        if (dialogueIndex < 0 || dialogueIndex >= dialogueData.lines.Length)
         {
-            int nextIndex = choice.nextDialogueIndexes[i];
-            CreateChoiceButton(choice.choices[i], () => ChooseOption(nextIndex));
+            Debug.LogError("Dialogue index is out of bounds for current quest state!");
+            dialogueIndex = 0; // Fallback to start
         }
 
-    }
-    void ChooseOption(int next)
-    {
-        dialogueIndex = next;
-        ClearChoices();
-        StopAllCoroutines();
+        IsDialogueActive = true;
+        dialoguePanel.SetActive(true);
+        // dialogueIndex is set above based on quest state, so don't reset to 0 here.
+        
+        nameText.SetText(dialogueData.npcName);
+        if (portraitImage != null)
+        {
+            portraitImage.sprite = dialogueData.npcPortrait;
+        }
+        
         StartCoroutine(TypeDialogue());
     }
-    void DisplayLine()
+
+    private void SyncQuestState()
     {
-        StopAllCoroutines();
-        StartCoroutine(TypeDialogue());
+        if (dialogueData.quest == null) 
+        {
+            questState = QuestState.NotStarted; // Default if no quest
+            return;
+        }
+        
+        string questID = dialogueData.quest.questID;
+        if (QuestController.Instance.IsQuestHandedIn(questID))
+        {
+            questState = QuestState.Completed; // Assumes handed-in means 'Completed' state for dialogue
+        }
+        else if (QuestController.Instance.IsQuestCompleted(questID)) // Completed but not handed in
+        {
+            questState = QuestState.Completed; 
+        }
+        else if (QuestController.Instance.IsQuestActive(questID))
+        {
+            questState = QuestState.InProgress;
+        }
+        else
+        {
+            questState = QuestState.NotStarted;
+        }
+    }
+    
+    private IEnumerator TypeDialogue()
+    {
+        isTyping = true;
+        dialogueText.text = "";
+        spacePanel.SetActive(false); // Hide space panel while typing
+
+        string currentLine = dialogueData.lines[dialogueIndex];
+        
+        // Calculate typing speed dynamically if lettersPerSecond > 0
+        float waitTime = dialogueData.typingSpeed > 0 ? 1f / dialogueData.typingSpeed : 0f; 
+
+        foreach (char letter in currentLine)
+        {
+            dialogueText.text += letter;
+            // Optionally play voice sound here
+            if (waitTime > 0f) 
+                yield return new WaitForSeconds(waitTime);
+            else 
+                yield return null; // Wait 1 frame if speed is 0
+        }
+        
+        spacePanel.SetActive(true);
+        isTyping = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && playerInRange && !IsDialogueActive)
+        {
+            Debug.Log("Pressed E");
+            StartDialogue();
+        }
+        if (!IsDialogueActive) return;
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            NextLine(); 
+        }
     }
     
 }
