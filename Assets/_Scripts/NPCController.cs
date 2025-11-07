@@ -14,9 +14,10 @@ public class NPCController : MonoBehaviour
     public Image portraitImage;
     private int dialogueIndex;
     private bool isTyping, playerInRange = false;
-    public static bool IsDialogueActive;
+    public bool IsDialogueActive;
     public Transform choiceContainer;
 
+    public static NPCController Instance { get; private set; }
     private void Start()
     {
         dialoguePanel.SetActive(false);
