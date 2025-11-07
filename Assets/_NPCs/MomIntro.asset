@@ -35,12 +35,8 @@ MonoBehaviour:
     - Okay I will...
     - You don't have to be such a bitch..
     nextDialogueIndexes: 0600000007000000
-    givesQuest: 
-  - dialogueIndex: 2
-    choices:
-    - 'Plz plz plz don''t make me go, Mom! The wolf will eat me dead! '
-    nextDialogueIndexes: 03000000
-    givesQuest: 
+    givesQuest: 00
+    death: 
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 0}
