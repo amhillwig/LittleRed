@@ -10,19 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 064d0127c1313ce4a8bfea049a66d0cb, type: 3}
-  m_Name: Wolf
+  m_Name: WolfDeath
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   npcName: Wolf
   npcPortrait: {fileID: 0}
   lines:
-  - 'Good-day, Little Red Riding Hood. Where are you off to on this cold, dark evening? '
-  - To grandma. I see. And where does your grandmother live, Little Red Riding Hood?
-  - '*To himself* What a tender young creature. What a nice plump mouthful, she will
-    be better to eat than the old woman. I must act craftily, so as to catch both.'
-  - 'You smell mighty tasty tonight, but I would be willing to let you pass without
-    a fight if you can offer me something worthy of my mercy. '
-  - Press X to offer the wolf something.
-  endDialogueLines: 000000000100
+  - Wrong Choice Little Red
+  endDialogueLines: 000000000000
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1

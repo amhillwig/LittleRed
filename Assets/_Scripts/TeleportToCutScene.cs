@@ -3,24 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class TeleportToCutScene : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    GameObject teleportObject = GameObject.Find("Teleport");
+    private GameObject teleportObject;
+
     void Start()
     {
+       
+        teleportObject = GameObject.Find("Teleport");
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        DontDestroyOnLoad(teleportObject);
         if (other.CompareTag("Player"))
         {
+            if (teleportObject != null)
+            {
+                teleportObject.SetActive(false);
+            }
+            // Load the cutscene scene
             SceneManager.LoadScene("WolfCutScene");
-            teleportObject.SetActive(false);
+
+            
+            
         }
     }
 }
