@@ -15,15 +15,21 @@ MonoBehaviour:
   npcName: Herbalist
   npcPortrait: {fileID: 765912962, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
   lines:
-  - Hello Miss Red
-  - How can I be of help
-  - Hmm the safest way through the woods is to stay on the path
-  - Do not go left or right. You understand.
-  endDialogueLines: 
+  - Hello, Miss Red!
+  - How can I be of help?
+  - Hmm... the safest way through the woods is to stay on the path
+  - Curiosity might just get you into trouble.
+  - Be careful!
+  endDialogueLines: 0000000001
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices: []
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - I need some advice about the woods.
+    nextDialogueIndexes: 02000000
+    givesQuest: 
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 11400000, guid: 1344e325ce8e422469077dd7c301843b, type: 2}

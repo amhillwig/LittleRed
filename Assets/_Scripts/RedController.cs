@@ -65,7 +65,7 @@ public class RedController : MonoBehaviour
             move.y -= 1;
 
             animator.SetFloat("moveY", -1);
-            animator.SetFloat("moveX", -1);
+            animator.SetFloat("moveX", 0);
 
         } else
         {

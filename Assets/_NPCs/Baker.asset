@@ -15,13 +15,19 @@ MonoBehaviour:
   npcName: Baker
   npcPortrait: {fileID: -2014038286, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
   lines:
-  - Hi Little Red
+  - Hi, Little Red!
   - I have plenty of baked goods inside.
-  endDialogueLines: 
+  - No, silly! They're still hot!
+  endDialogueLines: 00
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices: []
+  choices:
+  - dialogueIndex: 1
+    choices:
+    - Can I have some?
+    nextDialogueIndexes: 02000000
+    givesQuest: 
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 11400000, guid: 2552260cbcac8284786d80d3d09558aa, type: 2}

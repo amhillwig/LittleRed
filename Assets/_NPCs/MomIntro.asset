@@ -16,15 +16,16 @@ MonoBehaviour:
   npcPortrait: {fileID: -6674868978544099146, guid: 4cb3c8e0fd9964e4796a83414ae5d252,
     type: 3}
   lines:
-  - Red! Are you even listening to me? What're you daydreaming about??  This is important!
-  - You need to take this food and medicine to your Grandma, she's very sick.
-  - Now, hurry before night falls.
-  - You're being dramatic! If you do exactly as I say, you won't die! WHen have I
-    been wrong??
+  - Red! There you are! Where have you been??  I need you for something important.
+  - You must take this food and medicine to your Grandma, she's very sick.
+  - You should remember how to get there. Go through the forest and follow the path.
+    Don't go wandering off. If you hurry, you'll get there before night falls.
+  - You're being dramatic! If you do exactly as I say, you won't die! When have I
+    ever been wrong??
   - ...
   - Don't answer that.
-  - Glad you understand. Go on.
-  - Don't talk Back to your mother!
+  - I'm glad you understand. Go on.
+  - You'll do as I say! Now go on before your Grandma starves to death!!!
   endDialogueLines: 0000000000000101
   typingSpeed: 1
   voiceSound: {fileID: 0}
@@ -35,6 +36,11 @@ MonoBehaviour:
     - Okay I will...
     - No I won't
     nextDialogueIndexes: 0600000007000000
+    givesQuest: 00
+  - dialogueIndex: 2
+    choices:
+    - But Mom! The wolf'll eat me!
+    nextDialogueIndexes: 03000000
     givesQuest: 00
   inProgressIndex: 0
   completedIndex: 0

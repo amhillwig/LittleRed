@@ -15,14 +15,31 @@ MonoBehaviour:
   npcName: Woodsman
   npcPortrait: {fileID: -543646665, guid: 4cb3c8e0fd9964e4796a83414ae5d252, type: 3}
   lines:
-  - HI
-  - No I shan't escort you to your grandma
+  - ...
+  - ....
+  - .....
+  - You think I got a death wish, girl? Now scram before I eat you..
   - Bye
-  endDialogueLines: 
+  endDialogueLines: 00000001
   typingSpeed: 0
   voiceSound: {fileID: 0}
   voicePitch: 1
-  choices: []
+  choices:
+  - dialogueIndex: 0
+    choices:
+    - Hello, Woodsman!
+    nextDialogueIndexes: 01000000
+    givesQuest: 
+  - dialogueIndex: 1
+    choices:
+    - 'Mr. Woodsman, would you be my escort? '
+    nextDialogueIndexes: 02000000
+    givesQuest: 
+  - dialogueIndex: 2
+    choices:
+    - Please? The wolf will definitely eat me!
+    nextDialogueIndexes: 03000000
+    givesQuest: 
   inProgressIndex: 0
   completedIndex: 0
   quest: {fileID: 11400000, guid: 0d8f425960663b2459ddc62d643368e0, type: 2}
