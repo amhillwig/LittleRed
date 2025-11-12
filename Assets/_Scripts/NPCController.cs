@@ -29,12 +29,12 @@ public class NPCController : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if (Instance != this) Destroy(gameObject);
-        }
+    }
     private void Start()
     {
         dialoguePanel.SetActive(false);
-        dialogueText.text = ""; 
+        dialogueText.text = "";
+        IsDialogueActive = false;
     }
 
     public bool CanInteract()
@@ -59,11 +59,7 @@ public class NPCController : MonoBehaviour
                 dialogueText.text = dialogueData.lines[dialogueIndex];
                 isTyping = false;
             }
-            else
-            {
-
-                NextLine();
-            }
+            else NextLine();
         }
     }
     private void SyncQuestState()
@@ -195,6 +191,7 @@ public class NPCController : MonoBehaviour
     {
         if (questState == QuestState.Completed && rewardObject != null)
         {
+            
             rewardObject.SetActive(true);
         }
         StopAllCoroutines();
