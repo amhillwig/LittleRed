@@ -8517,6 +8517,8 @@ MonoBehaviour:
   portraitImage: {fileID: 1580406496}
   IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
+  fetchQuest: {fileID: 0}
+  rewardObject: {fileID: 0}
 --- !u!70 &359109964
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -8607,6 +8609,7 @@ MonoBehaviour:
   requiredAmount: 3
   questItems: []
   player: {fileID: 0}
+  inventoryIcons: []
 --- !u!1 &364260053
 GameObject:
   m_ObjectHideFlags: 0
@@ -14321,8 +14324,6 @@ Transform:
   - {fileID: 1643187037}
   - {fileID: 1153335982}
   - {fileID: 1859006485}
-  - {fileID: 1931065098}
-  - {fileID: 1046799457}
   - {fileID: 511432870}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17141,6 +17142,8 @@ MonoBehaviour:
   portraitImage: {fileID: 1580406496}
   IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
+  fetchQuest: {fileID: 0}
+  rewardObject: {fileID: 0}
 --- !u!70 &720364651
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -23434,50 +23437,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1045000417}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1046799456
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1046799457}
-  - component: {fileID: 1046799458}
-  m_Layer: 0
-  m_Name: RewardsController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1046799457
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046799456}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 629880896}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1046799458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1046799456}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7defc961031d584688dce10e47235e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RewardsController
 --- !u!1 &1048369033
 GameObject:
   m_ObjectHideFlags: 0
@@ -54691,8 +54650,9 @@ GameObject:
   - component: {fileID: 1338902952}
   - component: {fileID: 1338902953}
   - component: {fileID: 1338902954}
+  - component: {fileID: 1338902955}
   m_Layer: 0
-  m_Name: Woodman
+  m_Name: Woodsman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54795,6 +54755,8 @@ MonoBehaviour:
   portraitImage: {fileID: 1580406496}
   IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
+  fetchQuest: {fileID: 0}
+  rewardObject: {fileID: 0}
 --- !u!70 &1338902953
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -54869,6 +54831,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.27, y: 0.47}
   m_Direction: 0
+--- !u!114 &1338902955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338902949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db05452f681155a4cafb5b255fbfe2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleFetchQuest
+  questName: 
+  requiredAmount: 3
+  questItems: []
+  player: {fileID: 0}
+  inventoryIcons: []
 --- !u!1 &1344357406
 GameObject:
   m_ObjectHideFlags: 0
@@ -60921,7 +60900,7 @@ GameObject:
   - component: {fileID: 1643187037}
   - component: {fileID: 1643187040}
   - component: {fileID: 1643187039}
-  - component: {fileID: 1643187038}
+  - component: {fileID: 1643187041}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
@@ -60944,18 +60923,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 629880896}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1643187038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1643187036}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e98b055f70a2c4244b99dad959739f29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ForestScene
 --- !u!114 &1643187039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60978,6 +60945,8 @@ MonoBehaviour:
   portraitImage: {fileID: 0}
   IsDialogueActive: 0
   choiceContainer: {fileID: 0}
+  fetchQuest: {fileID: 0}
+  rewardObject: {fileID: 0}
 --- !u!70 &1643187040
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -61015,6 +60984,19 @@ CapsuleCollider2D:
   m_Offset: {x: -0.1744175, y: -0.30232573}
   m_Size: {x: 1.360466, y: 3.2674437}
   m_Direction: 0
+--- !u!114 &1643187041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643187036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97930bf0893fbee47a7bfbce04ea5494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TeleportToScene
+  SceneToLoad: Forest
 --- !u!1 &1647235128
 GameObject:
   m_ObjectHideFlags: 0
@@ -66860,6 +66842,7 @@ GameObject:
   - component: {fileID: 1915851627}
   - component: {fileID: 1915851628}
   - component: {fileID: 1915851629}
+  - component: {fileID: 1915851630}
   m_Layer: 0
   m_Name: Baker
   m_TagString: Untagged
@@ -66964,6 +66947,8 @@ MonoBehaviour:
   portraitImage: {fileID: 1580406496}
   IsDialogueActive: 0
   choiceContainer: {fileID: 679054046}
+  fetchQuest: {fileID: 0}
+  rewardObject: {fileID: 0}
 --- !u!70 &1915851628
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -67038,6 +67023,24 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.25, y: 0.44}
   m_Direction: 0
+--- !u!114 &1915851630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1915851624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db05452f681155a4cafb5b255fbfe2f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleFetchQuest
+  questName: Berry Quest
+  requiredAmount: 6
+  questItems: []
+  player: {fileID: 615916612947609720}
+  inventoryIcons:
+  - {fileID: 339111704}
 --- !u!1001 &1916504417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67294,37 +67297,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1931065097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1931065098}
-  m_Layer: 0
-  m_Name: ItemDIctionary
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1931065098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931065097}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 629880896}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1939179202
 GameObject:
   m_ObjectHideFlags: 0
@@ -71524,6 +71496,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e850f8acce4837242b6ea58e8eef8007, type: 3}
+--- !u!1 &615916612947609720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7420444635645900085, guid: e850f8acce4837242b6ea58e8eef8007,
+    type: 3}
+  m_PrefabInstance: {fileID: 615916612947609719}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1170176604745649081
 PrefabInstance:
   m_ObjectHideFlags: 0
