@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Item
+  - Mushroom
+  - Berry
   layers:
   - Default
   - TransparentFX
@@ -39,6 +41,9 @@ TagManager:
   - 
   - Characters
   m_SortingLayers:
+  - name: tile
+    uniqueID: 2727769759
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

@@ -19,7 +19,6 @@ public class SimpleFetchQuest : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else if (Instance != this) Destroy(gameObject);
     }
     void Start()
     {

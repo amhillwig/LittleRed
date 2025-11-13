@@ -10,22 +10,17 @@ public class InventoryManager : MonoBehaviour
 
     private HashSet<string> items = new HashSet<string>();
 
-    void Awake()
+    private void Awake()
     {
-        if (Instance = null) Instance = this;
-    }
-    public void AddItem(string itemName)
-    {
-        if (items.Add(itemName))
+        if (Instance == null)
         {
-            UpdateUI();
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
+    //public void AddItem(string itemName) { if (items.Add(itemName)) UpdateUI(); }
 
-    public bool HasItem(string itemName)
-    {
-        return items.Contains(itemName);
-    }
+    //public bool HasItem(string itemName) { return items.Contains(itemName);}
 
     void UpdateUI()
     {
@@ -33,15 +28,10 @@ public class InventoryManager : MonoBehaviour
             //Destroy(child.gameObject);
 
         //foreach (string item in items)
-        {
+        //{
             //var slot = Instantiate(inventorySlotPrefab, inventoryPanel);
             //slot.GetComponentInChildren<Text>().text = item;
-        }
+        //}
     }
-
-    public void RemoveItem(string itemName)
-    {
-        if (items.Remove(itemName))
-            UpdateUI();
-    }
+    //public void RemoveItem(string itemName) { if (items.Remove(itemName)) UpdateUI(); }
 }
